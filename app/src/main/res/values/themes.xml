@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BSUTools" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/dark_jungle_green</item>
+        <item name="colorPrimaryVariant">@color/dark_jungle_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/deep_aquamarine</item>
+        <item name="colorSecondaryVariant">@color/deep_aquamarine</item>
+        <item name="colorOnSecondary">#B85858</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="actionOverflowButtonStyle">@id/invisible</item>
+        <item name="fontFamily">@id/invisible</item>
+        <item name="android:textColor">@color/platinum</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/white</item>
+        <item name="fontFamily">@font/ubuntu_medium</item>
+    </style>
+</resources>
