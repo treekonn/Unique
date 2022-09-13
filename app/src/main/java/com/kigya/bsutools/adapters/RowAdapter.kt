@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.kigya.bsutools.databinding.ItemSubjectBinding
+import com.kigya.bsutools.databinding.ItemSubjectUpdatedBinding
 import com.kigya.bsutools.models.Row
 
 class RowAdapter : ListAdapter<Row, RowAdapter.RowViewHolder>(DiffComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowViewHolder =
         RowViewHolder(
-            view = ItemSubjectBinding.inflate(
+            view = ItemSubjectUpdatedBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
@@ -42,12 +43,12 @@ class RowAdapter : ListAdapter<Row, RowAdapter.RowViewHolder>(DiffComparator()) 
 
     inner class RowViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        private val viewBinding by viewBinding(ItemSubjectBinding::bind)
+        private val viewBinding by viewBinding(ItemSubjectUpdatedBinding::bind)
 
         fun bind(row: Row) {
             viewBinding.apply {
                 tvSubject.text = row.subject
-                tvTime.text = row.time
+                tvTime.text = row.time.replace("–", "\n")
                 tvTeacher.text = row.teacher
                 tvAudience.text = row.audience
                 tvGroup.text = row.group

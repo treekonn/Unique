@@ -13,8 +13,9 @@
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
         <item name="actionOverflowButtonStyle">@id/invisible</item>
-        <item name="fontFamily">@id/invisible</item>
+        <item name="fontFamily">@font/poppins_medium</item>
         <item name="android:textColor">@color/platinum</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">

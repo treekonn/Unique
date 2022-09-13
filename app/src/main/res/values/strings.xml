@@ -13,6 +13,8 @@
     <string name="image_group">Image group</string>
     <string name="type_image">Type image</string>
     <string name="image_audience_number">Image audience number</string>
+    <string name="settings">Settings</string>
+    <string name="location_image">Location image</string>
 
     <string-array name="weekdays">
         <item>@string/monday</item>

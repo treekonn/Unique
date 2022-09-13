@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="20dp">
+    android:layout_marginBottom="200dp">
 
     <com.furkanakdemir.surroundcardview.SurroundCardView
         android:id="@+id/sampleSurroundCardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="205dp"
         android:backgroundTint="@color/deep_aquamarine"
         app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/platinum"
@@ -38,10 +39,10 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="40dp"
                 android:fontFamily="@font/ubuntu_bold"
-                android:textFontWeight="600"
                 android:gravity="center"
                 android:maxLines="2"
                 android:textColor="@color/platinum"
+                android:textFontWeight="600"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -52,12 +53,12 @@
                 android:id="@+id/tvTeacher"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="6dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:textFontWeight="600"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvSubject"
-                tools:text="Дерюшев А. А."/>
+                tools:text="Дерюшев А. А." />
 
             <ImageView
                 android:id="@+id/ivTime"
@@ -87,15 +88,15 @@
                 android:id="@+id/ivType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="40dp"
                 android:contentDescription="@string/type_image"
                 android:src="@drawable/ic_study"
                 app:layout_constraintBottom_toBottomOf="@id/ivTime"
-                android:layout_marginStart="20dp"
-                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toEndOf="@id/ivTime"
-                app:layout_constraintTop_toTopOf="@id/ivTime"
-                android:layout_marginEnd="40dp" />
+                app:layout_constraintTop_toTopOf="@id/ivTime" />
 
             <TextView
                 android:id="@+id/tvType"
@@ -115,43 +116,43 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="@string/calendar_image"
                 android:src="@drawable/ic_hierarchy"
+                app:layout_constraintEnd_toEndOf="@+id/ivTime"
                 app:layout_constraintStart_toStartOf="@id/ivTime"
-                app:layout_constraintTop_toBottomOf="@id/ivTime"
-                app:layout_constraintEnd_toEndOf="@+id/ivTime"/>
+                app:layout_constraintTop_toBottomOf="@id/ivTime" />
 
             <TextView
                 android:id="@+id/tvGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
                 android:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toBottomOf="@id/ivGroup"
                 app:layout_constraintStart_toEndOf="@id/ivGroup"
                 app:layout_constraintTop_toTopOf="@id/ivGroup"
-                android:layout_marginStart="12dp"
                 tools:text="а 1н" />
 
             <ImageView
                 android:id="@+id/ivAudience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/image_audience_number"
                 android:src="@drawable/ic_number"
-                app:layout_constraintTop_toTopOf="@id/ivGroup"
                 app:layout_constraintBottom_toBottomOf="@id/ivGroup"
-                app:layout_constraintStart_toStartOf="@id/ivType"
                 app:layout_constraintEnd_toEndOf="@id/ivType"
                 app:layout_constraintHorizontal_chainStyle="packed"
-                android:contentDescription="@string/image_audience_number"/>
+                app:layout_constraintStart_toStartOf="@id/ivType"
+                app:layout_constraintTop_toTopOf="@id/ivGroup" />
 
             <TextView
                 android:id="@+id/tvAudience"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="606"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/ubuntu"
+                app:layout_constraintBottom_toBottomOf="@id/ivAudience"
                 app:layout_constraintStart_toEndOf="@id/ivAudience"
                 app:layout_constraintTop_toTopOf="@id/ivAudience"
-                app:layout_constraintBottom_toBottomOf="@id/ivAudience"
-                android:fontFamily="@font/ubuntu"
-                android:layout_marginStart="12dp"/>
+                tools:text="606" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,10 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="deep_aquamarine">#3C7E6F</color>
+    <color name="deep_aquamarine">#143C7E6F</color>
     <color name="y_in_mn_blue">#264D98</color>
     <color name="dark_jungle_green">#131B26</color>
     <color name="platinum">#E5E5E5</color>
+    <color name="platinum_light">#0CE5E5E5</color>
 
     <color name="dark_gunmetal">#1B232E</color>
 </resources>

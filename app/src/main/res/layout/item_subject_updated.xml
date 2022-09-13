@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:paddingBottom="10dp"
+    android:background="@color/dark_jungle_green">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/platinum"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12:00\n14:20" />
+
+    <com.furkanakdemir.surroundcardview.SurroundCardView
+        android:id="@+id/sampleSurroundCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/dark_gunmetal"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTime"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/platinum"
+        app:scv_color="@color/platinum_light"
+        app:scv_duration="1500"
+        app:scv_startPoint="bottom_start"
+        app:scv_surrounded="false"
+        app:scv_width="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/tvType"
+            app:layout_constraintTop_toTopOf="@+id/tvType">
+
+            <TextView
+                android:id="@+id/tvSubject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/poppins_black"
+                android:gravity="start"
+                android:maxLines="2"
+                android:textColor="@color/platinum"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Компьютерные сети" />
+
+            <TextView
+                android:id="@+id/tvTeacher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSubject"
+                tools:text="Дерюшев А. А." />
+
+            <LinearLayout
+                android:id="@+id/llAduience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="@id/tvTeacher"
+                app:layout_constraintTop_toBottomOf="@id/tvTeacher"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/location_image"
+                    android:src="@drawable/ic_location_point" />
+
+                <TextView
+                    android:id="@+id/tvAudience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    tools:text="606" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/llAduience"
+                app:layout_constraintTop_toBottomOf="@id/tvTeacher"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/ivType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/type_image"
+                    android:src="@drawable/ic_study" />
+
+                <TextView
+                    android:id="@+id/tvType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    tools:text="п" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@id/llType"
+                app:layout_constraintTop_toBottomOf="@id/tvTeacher"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/ivGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:contentDescription="@string/calendar_image"
+                    android:src="@drawable/ic_hierarchy"
+                    app:layout_constraintEnd_toEndOf="@+id/ivTime"
+                    app:layout_constraintStart_toStartOf="@id/ivTime"
+                    app:layout_constraintTop_toBottomOf="@id/ivTime" />
+
+                <TextView
+                    android:id="@+id/tvGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/ubuntu"
+                    app:layout_constraintBottom_toBottomOf="@id/ivGroup"
+                    app:layout_constraintStart_toEndOf="@id/ivGroup"
+                    app:layout_constraintTop_toTopOf="@id/ivGroup"
+                    tools:text="а 1н" />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.furkanakdemir.surroundcardview.SurroundCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
