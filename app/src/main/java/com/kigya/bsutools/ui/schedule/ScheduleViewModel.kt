@@ -1,4 +1,4 @@
-package com.kigya.bsutools.ui
+package com.kigya.bsutools.ui.schedule
 
 import androidx.lifecycle.*
 import com.kigya.bsutools.adapters.RowAdapter
@@ -8,11 +8,12 @@ import com.kigya.bsutools.repository.RowRepository
 import com.kigya.bsutools.utils.Resource
 import com.skydoves.powerspinner.OnSpinnerItemSelectedListener
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class RowsViewModel @Inject constructor(
+class ScheduleViewModel @Inject constructor(
     rowRepository: RowRepository,
     dataStoreRepository: DataStoreRepository
 ) : ViewModel(), OnSpinnerItemSelectedListener<String> {
@@ -22,12 +23,6 @@ class RowsViewModel @Inject constructor(
 
     val rowAdapter = RowAdapter()
     var currentDayIndex: Int? = null
-
-    init {
-        viewModelScope.launch {
-            dataStoreRepository.savetoDataStore(3, 9)
-        }
-    }
 
     private fun filterTimetable(list: List<Row>, index: Int): List<Row> {
         return list.filter {
@@ -48,13 +43,10 @@ class RowsViewModel @Inject constructor(
         currentDayIndex = newIndex
     }
 
-//    fun retrieveData(dataStoreRepository: DataStoreRepository) {
-//        viewModelScope.launch(Dispatchers.IO) {
-//            dataStoreRepository.getFromDataStore().collect() {
-//                pairLiveData.postValue(it)
-//            }
-//        }
-//    }
+    fun clearUI() {
+        rowAdapter.submitList(emptyList())
+        currentDayIndex = null
+    }
 
     private fun fetchRows(
         dataStoreRepository: DataStoreRepository,

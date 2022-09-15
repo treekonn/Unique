@@ -15,6 +15,9 @@
     <string name="image_audience_number">Image audience number</string>
     <string name="settings">Settings</string>
     <string name="location_image">Location image</string>
+    <string name="course">Course</string>
+    <string name="group">Group</string>
+    <string name="save_changes">Save Changes</string>
 
     <string-array name="weekdays">
         <item>@string/monday</item>

@@ -102,6 +102,7 @@ dependencies {
     // DataStore Preferences
     implementation "androidx.datastore:datastore-preferences:1.0.0"
 
-    // SingleRowCalendar
-    implementation 'com.github.tejpratap46:RecyclerCalendarAndroid:2.0.1'
+    // ToggleButtonGroup
+    implementation 'com.nex3z:toggle-button-group:1.2.3'
+
 }

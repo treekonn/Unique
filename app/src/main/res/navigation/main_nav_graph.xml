@@ -10,5 +10,10 @@
     <fragment
         android:id="@+id/eduFragment"
         android:name="com.kigya.bsutools.ui.edu.SettingsFragment"
-        android:label="Settings" />
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_eduFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment"
+            app:popUpTo="@id/scheduleFragment" />
+    </fragment>
 </navigation>
