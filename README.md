@@ -30,7 +30,7 @@
 
 
 ## Demo
-![Screenshot_20220916_121850](https://user-images.githubusercontent.com/73034324/190604112-601ae240-749f-4fef-a7e3-a7e28c212938.png)
-![Screenshot_20220916_121954](https://user-images.githubusercontent.com/73034324/190604146-0132a74f-a809-496e-80d7-32ef7f3948d8.png)
+<img src="https://user-images.githubusercontent.com/73034324/190604112-601ae240-749f-4fef-a7e3-a7e28c212938.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/73034324/190604146-0132a74f-a809-496e-80d7-32ef7f3948d8.png" width="200" height="400" />
 
 
