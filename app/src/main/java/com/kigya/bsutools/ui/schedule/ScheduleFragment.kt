@@ -4,16 +4,15 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.view.animation.OvershootInterpolator
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.kigya.bsutools.R
+import com.kigya.bsutools.core.Resource
+import com.kigya.bsutools.data.models.Row
 import com.kigya.bsutools.databinding.FragmentScheduleBinding
-import com.kigya.bsutools.models.Row
-import com.kigya.bsutools.utils.Resource
 import jp.wasabeef.recyclerview.animators.FadeInAnimator
 
 class ScheduleFragment : Fragment(R.layout.fragment_schedule) {
