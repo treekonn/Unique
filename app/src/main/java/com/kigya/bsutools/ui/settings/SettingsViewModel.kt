@@ -5,7 +5,6 @@ import androidx.lifecycle.viewModelScope
 import com.kigya.bsutools.R
 import com.kigya.bsutools.application.di.IoDispatcher
 import com.kigya.bsutools.domain.repository.DataStoreRepository
-import com.kigya.bsutools.domain.repository.RowRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
@@ -14,7 +13,6 @@ import javax.inject.Inject
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val dataStoreRepository: DataStoreRepository,
-    private val rowRepository: RowRepository,
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) : ViewModel() {
 

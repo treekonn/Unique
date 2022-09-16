@@ -11,8 +11,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-val Context.dataStore: DataStore<Preferences> by preferencesDataStore(Constants.TIMETABLE_PREFERENCES)
-
 class DataStoreRepository @Inject constructor(
     private val dataStore: DataStore<Preferences>
 ) {
