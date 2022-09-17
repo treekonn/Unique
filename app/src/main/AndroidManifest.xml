@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.kigya.bsutools">
+    package="com.kigya.consulado">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".application.App"
+        android:name="com.kigya.consulado.application.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,7 +18,7 @@
         android:theme="@style/Theme.BSUTools"
         tools:targetApi="31">
         <activity
-            android:name=".application.MainActivity"
+            android:name="com.kigya.consulado.application.MainActivity"
             android:exported="true"
             android:screenOrientation="sensorPortrait">
             <intent-filter>

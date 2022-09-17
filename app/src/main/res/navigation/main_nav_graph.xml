@@ -5,11 +5,11 @@
     app:startDestination="@id/scheduleFragment">
     <fragment
         android:id="@+id/scheduleFragment"
-        android:name="com.kigya.bsutools.ui.schedule.ScheduleFragment"
+        android:name="com.kigya.consulado.ui.schedule.ScheduleFragment"
         android:label="Schedule" />
     <fragment
         android:id="@+id/eduFragment"
-        android:name="com.kigya.bsutools.ui.settings.SettingsFragment"
+        android:name="com.kigya.consulado.ui.settings.SettingsFragment"
         android:label="Settings" >
         <action
             android:id="@+id/action_eduFragment_to_scheduleFragment"

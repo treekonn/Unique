@@ -21,7 +21,7 @@
         app:scv_duration="1500"
         app:scv_startPoint="bottom_start"
         app:scv_surrounded="false"
-        app:scv_width="3dp">
+        app:scv_width="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
