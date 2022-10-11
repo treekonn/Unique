@@ -6,6 +6,8 @@ pluginManagement {
         maven(url = "https://jitpack.io")
     }
 }
+
+@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -14,5 +16,6 @@ dependencyResolutionManagement {
         maven(url = "https://jitpack.io")
     }
 }
-rootProject.name = "Consulado"
+
+rootProject.name = "Unique"
 include(":app")

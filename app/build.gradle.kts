@@ -1,107 +1,91 @@
 plugins {
-    id("com.android.application")
+    id(Plugins.application)
     kotlin("android")
     kotlin("kapt")
-    id("androidx.navigation.safeargs.kotlin")
-    id("dagger.hilt.android.plugin")
+    id(Plugins.safeargs)
+    id(Plugins.hilt)
 }
 
 android {
-    compileSdk = 33
+    compileSdk = AppConfig.compileSdk
 
     defaultConfig {
-        applicationId = "com.kigya.consulado"
-        minSdk = 23
-        targetSdk = 33
-        versionCode = 2
-        versionName = "0.9.1"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        applicationId = AppConfig.id
+        minSdk = AppConfig.minSdk
+        targetSdk = AppConfig.targetSdk
+        versionCode = AppConfig.versionCode
+        versionName = AppConfig.versionName
+        testInstrumentationRunner = AppConfig.testInstrumentationRunner
         signingConfig = signingConfigs.getByName("debug")
     }
 
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    
-    kotlinOptions.jvmTarget = "1.8"
+
+    kotlinOptions.jvmTarget = Versions.jvmVersion
 
     viewBinding.enable = true
 
-    namespace = "com.kigya.consulado"
+    namespace = AppConfig.id
 }
 
 dependencies {
+    testImplementation(AppDependencies.JUnit.junit)
+    androidTestImplementation(AppDependencies.JUnit.ext)
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation(AppDependencies.Espresso.core)
 
-    // Jsoup
-    implementation("org.jsoup:jsoup:1.13.1")
+    implementation(AppDependencies.AppCompat.appcompat)
+    implementation(AppDependencies.Core.ktx)
+    implementation(AppDependencies.Material.material)
 
-    // ViewBindingPropertyDelegate
-    implementation("com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.6")
+    implementation(AppDependencies.Constraint.constraintLayout)
 
-    // Navigation Components
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
+    implementation(AppDependencies.Jsoup.jsoup)
 
-    // Coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation(AppDependencies.Navigation.ktx)
+    implementation(AppDependencies.Navigation.uiKtx)
 
-    // Coroutine Lifecycle Scopes
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    implementation(AppDependencies.Coroutines.core)
+    implementation(AppDependencies.Coroutines.android)
 
-    // Architectural Components
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation(AppDependencies.Lifecycle.ktx)
+    implementation(AppDependencies.Lifecycle.runtime)
 
-    // Hilt
-    implementation("com.google.dagger:hilt-android:2.43.2")
-    annotationProcessor("com.google.dagger:hilt-compiler:2.43.2")
-    kapt("com.google.dagger:hilt-compiler:2.43.2")
+    implementation(AppDependencies.Hilt.hilt)
+    annotationProcessor(AppDependencies.Hilt.compiler)
+    kapt(AppDependencies.Hilt.compiler)
 
-    // AnimatedBottomBar
-    implementation("nl.joery.animatedbottombar:library:1.1.0")
+    implementation(AppDependencies.AnimatedBottomBar.library)
 
-    // Room
-    implementation("androidx.room:room-runtime:2.4.3")
-    kapt("androidx.room:room-compiler:2.4.3")
+    implementation(AppDependencies.Room.runtime)
+    implementation(AppDependencies.Room.ktx)
+    kapt(AppDependencies.Room.compiler)
 
-    // Kotlin Extensions and Coroutines support for Room
-    implementation("androidx.room:room-ktx:2.4.3")
+    implementation(AppDependencies.LiveData.ktx)
 
-    // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+    implementation(AppDependencies.PowerSpinner.powerSpinner)
 
-    // PowerSpinner
-    implementation("com.github.skydoves:powerspinner:1.2.4")
+    implementation(AppDependencies.ToggleButtonGroup.toggleButtonGroup)
 
-        // SurroundCardView
-    implementation("com.furkanakdemir:surroundcardview:1.0.6")
+    implementation(AppDependencies.SurroundCardView.surroundCardView)
 
-    // RoundCornerProgressBar
-    implementation("com.akexorcist:round-corner-progress-bar:2.1.2")
+    implementation(AppDependencies.RoundCornerProgressBar.roundCornerProgressBar)
 
-    // RecyclerView Animators
-    implementation("jp.wasabeef:recyclerview-animators:4.0.2")
+    implementation(AppDependencies.RecyclerViewAnimators.recyclerViewAnimators)
 
-    // DataStore Preferences
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation(AppDependencies.ViewBindingPropertyDelegate.viewBindingPropertyDelegate)
 
-    // ToggleButtonGroup
-    implementation("com.nex3z:toggle-button-group:1.2.3")
-
+    implementation(AppDependencies.DataStore.preferences)
 }
