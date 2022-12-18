@@ -56,8 +56,16 @@ object AppDependencies {
     }
 
     object RecyclerViewAnimators {
-        val recyclerViewAnimators =
+        const val recyclerViewAnimators =
             "jp.wasabeef:recyclerview-animators:${Versions.recyclerViewAnimators}"
+    }
+
+    object Lottie {
+        const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
+    }
+
+    object CircleProgressBar {
+        const val progressBar = "com.mikhaellopez:circularprogressbar:${Versions.progressBar}"
     }
 
 
@@ -110,6 +118,14 @@ object AppDependencies {
     object DataStore {
         const val preferences =
             "androidx.datastore:datastore-preferences:${Versions.dataStore}"
+    }
+
+    object Gson {
+        const val gson = "com.google.code.gson:gson:${Versions.gson}"
+    }
+
+    object Dimens {
+        const val ssp = "com.intuit.ssp:ssp-android:${Versions.ssp}"
     }
 
 }

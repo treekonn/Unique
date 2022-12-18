@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="guidelines_constraint">16dp</dimen>
+
+    <dimen name="text_size_xs">16sp</dimen>
+    <dimen name="text_size_s">18sp</dimen>
+    <dimen name="text_size_m">20sp</dimen>
+    <dimen name="text_size_l">22sp</dimen>
+    <dimen name="text_size_xl">24sp</dimen>
+
+    <dimen name="margin_xs">5dp</dimen>
+    <dimen name="margin_s">20dp</dimen>
+    <dimen name="margin_m">40dp</dimen>
+    <dimen name="margin_l">80dp</dimen>
+    <dimen name="margin_xl">100dp</dimen>
+    <dimen name="margin_xxl">200dp</dimen>
+    <dimen name="margin_xxxl">500dp</dimen>
+
+</resources>

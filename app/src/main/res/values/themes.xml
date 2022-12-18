@@ -2,25 +2,20 @@
     <!-- Base application theme. -->
     <style name="Theme.Unique" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/dark_jungle_green</item>
-        <item name="colorPrimaryVariant">@color/dark_jungle_green</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/white_base_back</item>
+        <item name="colorPrimaryVariant">@color/white_base_dark</item>
+        <item name="colorOnPrimary">@color/white_base_back</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/deep_aquamarine</item>
-        <item name="colorSecondaryVariant">@color/deep_aquamarine</item>
-        <item name="colorOnSecondary">#B85858</item>
+        <item name="colorSecondary">@color/green_base</item>
+        <item name="colorSecondaryVariant">@color/green_base_dark</item>
+        <item name="colorOnSecondary">@color/green_base</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
         <item name="actionOverflowButtonStyle">@id/invisible</item>
-        <item name="fontFamily">@font/poppins_medium</item>
-        <item name="android:textColor">@color/platinum</item>
+        <item name="fontFamily">@font/jost_regular</item>
+        <item name="android:textColor">@color/black_base</item>
         <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <!-- Customize color of navigation drawer icon and back arrow -->
-        <item name="colorControlNormal">@color/white</item>
-        <item name="fontFamily">@font/ubuntu_medium</item>
+        <item name="android:colorBackground">@color/white_base_back</item>
     </style>
 </resources>

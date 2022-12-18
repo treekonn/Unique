@@ -4,6 +4,7 @@ plugins {
     kotlin("kapt")
     id(Plugins.safeargs)
     id(Plugins.hilt)
+    id(Plugins.ktLint) version Versions.ktLint
 }
 
 android {
@@ -88,4 +89,20 @@ dependencies {
     implementation(AppDependencies.ViewBindingPropertyDelegate.viewBindingPropertyDelegate)
 
     implementation(AppDependencies.DataStore.preferences)
+
+    implementation(AppDependencies.Gson.gson)
+
+    implementation(AppDependencies.Lottie.lottie)
+
+    implementation(AppDependencies.Dimens.ssp)
+
+    implementation(AppDependencies.CircleProgressBar.progressBar)
+
+    implementation("com.kizitonwose.calendar:view:2.0.4")
+
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation("com.github.amarjain07:StickyScrollView:1.0.3")
+
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }

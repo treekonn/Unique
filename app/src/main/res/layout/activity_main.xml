@@ -1,72 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_jungle_green">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/dark_jungle_green"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/ToolbarTheme"
-            app:navigationIcon="@drawable/ic_arrow_left"
-            app:title="Schedule"
-            app:titleTextColor="@color/platinum">
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
+    android:orientation="vertical"
+    tools:context="com.kigya.unique.ui.main.MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/navHostFragment"
+        android:id="@+id/fragmentContainer"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-        app:layout_constraintVertical_bias="1.0"
-        app:navGraph="@navigation/main_nav_graph" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true" />
 
-    <nl.joery.animatedbottombar.AnimatedBottomBar
-        android:id="@+id/bottom_bar"
-        android:background="@drawable/nav_background_curved"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:abb_selectedTabType="text"
-        app:abb_indicatorAppearance="round"
-        app:abb_tabColor="@color/platinum"
-        app:abb_badgeTextColor="@color/platinum"
-        app:abb_rippleColor="@color/dark_jungle_green"
-        app:abb_tabColorSelected="@color/platinum"
-        app:abb_indicatorColor="@color/platinum"
-        app:abb_badgeBackgroundColor="@color/dark_jungle_green"
-        app:abb_rippleEnabled="true"
-        app:abb_indicatorMargin="16dp"
-        app:abb_indicatorHeight="4dp"
-        app:abb_tabs="@menu/bottom_navigation_menu"
-        app:abb_animationDuration="500"
-        app:abb_badgeAnimation="fade"
-        app:abb_indicatorAnimation="fade"
-        app:abb_selectedIndex="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="20dp"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

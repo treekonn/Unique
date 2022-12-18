@@ -1,6 +1,6 @@
 object Versions {
 
-   // android ui libraries
+    // android ui libraries
     const val appcompat = "1.5.1"
     const val material = "1.6.1"
     const val constraint = "2.1.4"
@@ -11,6 +11,8 @@ object Versions {
     const val surroundCardView = "1.0.6"
     const val roundCornerProgressBar = "2.1.2"
     const val recyclerViewAnimators = "4.0.2"
+    const val lottie = "5.2.0"
+    const val progressBar = "3.1.0"
 
     // external libraries
     const val jsoup = "1.13.1"
@@ -22,6 +24,7 @@ object Versions {
     const val room = "2.4.3"
     const val liveData = "2.5.1"
     const val dataStore = "1.0.0"
+    const val gson = "2.9.1"
 
     // test libraries
     const val junit = "4.13.2"
@@ -29,9 +32,11 @@ object Versions {
     const val espresso = "3.4.0"
 
     // android plygins
-   const val hiltPlugin = "2.43.2"
-   const val safeargs = "2.4.2"
-   const val kotlin = "1.7.10"
-   const val application = "7.3.0"
-   const val jvmVersion = "1.8"
+    const val hiltPlugin = "2.43.2"
+    const val safeargs = "2.4.2"
+    const val kotlin = "1.7.10"
+    const val application = "7.3.0"
+    const val jvmVersion = "1.8"
+    const val ktLint = "11.0.0"
+    const val ssp = "1.1.0"
 }

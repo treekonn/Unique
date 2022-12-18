@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/tabsFragment">
+
+    <fragment
+        android:id="@+id/tabsFragment"
+        android:name="com.kigya.unique.ui.tabs.TabsFragment"
+        android:label="fragment_tabs"
+        tools:layout="@layout/fragment_tabs" />
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.kigya.unique.ui.survey.onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboardingFragment_to_initialSetupFragment"
+            app:destination="@id/initialSetupFragment"
+            app:popUpTo="@id/onboardingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialSetupFragment"
+        android:name="com.kigya.unique.ui.survey.setup.InitialSetupFragment"
+        android:label="fragment_initial_setup"
+        tools:layout="@layout/fragment_initial_setup">
+        <action
+            android:id="@+id/action_initialSetupFragment_to_tabsFragment"
+            app:destination="@id/tabsFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

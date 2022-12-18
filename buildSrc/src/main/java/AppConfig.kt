@@ -2,7 +2,7 @@ object AppConfig {
     const val id = "com.kigya.unique"
     const val name = "Unique"
     const val compileSdk = 33
-    const val minSdk = 23
+    const val minSdk = 26
     const val targetSdk = 33
     const val versionCode = 2
     const val versionName = "0.9.1"

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ItemWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ItemMatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ItemFillConstraint">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="ImageButtonMaterial" parent="ItemWrapContent">
+        <item name="android:background">@null</item>
+        <item name="android:src">@null</item>
+    </style>
+
+    <style name="GuidelineMaterial" parent="ItemWrapContent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="GuidelineMaterial.Start" parent="GuidelineMaterial">
+        <item name="layout_constraintGuide_begin">@dimen/guidelines_constraint</item>
+    </style>
+
+    <style name="GuidelineMaterial.End" parent="GuidelineMaterial">
+        <item name="layout_constraintGuide_end">@dimen/guidelines_constraint</item>
+    </style>
+
+</resources>

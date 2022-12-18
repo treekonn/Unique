@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvDayItemCalendar"
+    style="@style/ItemWrapContent"
+    app:cardCornerRadius="@dimen/_8ssp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/ItemMatchParent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/tvDayItemWeekDay"
+            style="@style/ItemMatchParent"
+            android:gravity="center_horizontal"
+            android:textColor="@color/gray_base"
+            android:textSize="@dimen/text_size_xs"
+            app:layout_constraintBottom_toTopOf="@id/tvDayItemDate"
+            app:layout_constraintEnd_toEndOf="@id/tvDayItemDate"
+            app:layout_constraintStart_toStartOf="@id/tvDayItemDate"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="ВТ" />
+
+        <TextView
+            android:id="@+id/tvDayItemDate"
+            style="@style/ItemMatchParent"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size_s"
+            app:fontFamily="@font/jost_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDayItemWeekDay"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="22" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
+

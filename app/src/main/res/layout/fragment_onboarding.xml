@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/ItemMatchParent"
+    tools:context="com.kigya.unique.ui.survey.onboarding.OnboardingFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        style="@style/GuidelineMaterial.Start" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        style="@style/GuidelineMaterial.End" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieManAnimation"
+        android:layout_width="500dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tvCinemaQuestion"
+        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/man"
+        app:lottie_speed="0.5" />
+
+    <TextView
+        android:id="@+id/tvCinemaQuestion"
+        style="@style/ItemWrapContent"
+        android:layout_marginTop="100dp"
+        android:text="@string/cinema_question"
+        android:textColor="@color/green_base"
+        android:textSize="@dimen/text_size_xl"
+        app:fontFamily="@font/jost_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCinemaAnswer"
+        style="@style/ItemWrapContent"
+        android:text="@string/cinema_answer"
+        android:textColor="@color/green_base"
+        android:textSize="@dimen/text_size_xl"
+        android:visibility="gone"
+        app:fontFamily="@font/jost_semibold"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@id/tvCinemaQuestion" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieSwipeAnimation"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toTopOf="@id/ivBackPattern"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCinemaAnswer"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/left_swipe" />
+
+    <ImageView
+        android:id="@+id/ivBackPattern"
+        style="@style/ItemWrapContent"
+        android:contentDescription="@string/background_pattern"
+        android:src="@drawable/back_elements"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        style="@style/ImageButtonMaterial"
+        android:layout_marginEnd="@dimen/margin_m"
+        android:layout_marginBottom="@dimen/margin_s"
+        android:contentDescription="@dimen/margin_s"
+        android:src="@drawable/button_next_inactive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        style="@style/ItemFillConstraint"
+        app:cpb_background_progressbar_color="@color/green_base"
+        app:cpb_background_progressbar_width="4dp"
+        app:cpb_progressbar_color="@color/green_base_dark"
+        app:cpb_progressbar_width="5dp"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="@id/btnNext"
+        app:layout_constraintEnd_toEndOf="@id/btnNext"
+        app:layout_constraintStart_toStartOf="@id/btnNext"
+        app:layout_constraintTop_toTopOf="@id/btnNext"
+        tools:cpb_progress="20" />
+</androidx.constraintlayout.widget.ConstraintLayout>
