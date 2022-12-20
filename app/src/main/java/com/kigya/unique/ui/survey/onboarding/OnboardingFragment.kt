@@ -34,6 +34,7 @@ class OnboardingFragment : BaseFragment(R.layout.fragment_onboarding) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.startSidesCircularReveal(false)
+
         with(viewBinding) {
             setInitialState()
             startProgress()
@@ -42,6 +43,7 @@ class OnboardingFragment : BaseFragment(R.layout.fragment_onboarding) {
             lottieManAnimation.preventDissapearing()
             onButtonNextClicked()
         }
+
     }
 
     private fun FragmentOnboardingBinding.onButtonNextClicked() {
